@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Mer Browser</title>
+</head>
+
+<body>
+
+    <div class="browser">
+        <div class="row">
+            <div class="column left">
+                <span class="dot" id="close" style="background:#ED594A;"></span>
+                <span class="dot" id="more" style="background:#d24aed;">+</span>
+            </div>
+            <div class="logo">
+                <img src="assets/images/wave.png" alt="Onda" id="wave">
+            </div>
+            <div class="column middle" id="url">
+                <input type="text" id="url_text" autofocus>
+                <img src="assets/images/go2.png" alt="Go" id="go">
+            </div>
+            <div id="details" class="2">
+                <div><span>Altura x Largura</span><p id="width-height"></p></div>
+                <div><span>URL</span><p id="iframe-url"></p></div>
+                <div><span>Protocolo</span><p id="protocol"></p></div>
+                <div><span>Porta</span><p id="port"></p></div>
+                <div><span>S.O</span><p id="so"></p></div>
+            </div>
+            <div class="column right">
+                <div style="float:right" id="datas">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Viewport do navegador -->
+        <div class="container-frameTab">
+            <iframe name="frameTab" id="iframeId" class="responsive-iframe" src="./home/index.html" style="border: none; border-top: solid 1px #000"></iframe>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
