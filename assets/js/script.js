@@ -3,17 +3,28 @@ const windowFrame = window.open('./home/index.html', 'frameTab');
 const opening = document.querySelector('#more');
 const closing = document.querySelector('#close');
 let boolean = true;
+let input = document.querySelector('#url input')
 
-document.querySelector('#go').addEventListener('click', function() {
+let search = function() {
     
-    opening.style.display = "none";
-    closing.style.display = "block";
+    if(input.value.trim().length){
+        opening.style.display = "none";
+        closing.style.display = "block";
 
-    let url = document.querySelector('#url input').value;
-    windowFrame.location.assign(url);
+        url = input.value;
+        windowFrame.location.assign(url);
 
-    detailsIframe();
-});
+        detailsIframe();
+    }
+}
+
+input.addEventListener('keypress', e => {
+    if(e.keyCode === 13) {
+        search();
+    }
+})
+
+document.querySelector('#go').addEventListener('click', search);
 
 opening.addEventListener('click', function() {
     
